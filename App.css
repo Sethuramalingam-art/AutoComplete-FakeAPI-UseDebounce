@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stepper-wrapper {
+  width: 100%;
+  height: 75px;
+  border: 1px solid;
+}
+
+.progress-track {
+  position: relative;
+  height: 4%;
+  top: 22%;
+}
+
+.progress-line {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: gray;
+  right: 0;
+  left: 0;
+  top: 20%;
+  transition: width 0.25s ease;
+  z-index: -1;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: brown;
+  color: aliceblue;
+}
+
+.autoCpmplete-wrapper {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 20px 10px;
+}
+.search-wrapper {
+  width: 25%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid whitesmoke;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:not(:placeholder-shown) + .closeIcon {
+  display: block;
+}
+
+.listView {
+  width: 25%;
+  border: 1px solid lightgrey;
+  background-color: white;
+  overflow-y: auto;
+  z-index: 1;
+  min-height: 100px;
+}
+
+.closeIcon {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+.listItem {
+  padding: 5px 10px;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  background-color: aliceblue;
+}
